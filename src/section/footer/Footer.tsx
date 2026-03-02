@@ -231,7 +231,7 @@ const Footer = () => {
   const contactInfo = [
     { icon: Mail, label: "info@viloratechnologies.com", href: "mailto:info@viloratechnologies.com" },
     { icon: Phone, label: "+91 8610391458", href: "tel:8610391458" },
-    { icon: MapPin, label: "1st Floor, 62, Vallalar Salai Rd, Venkata Nagar, Puducherry, 605011", href: "https://maps.app.goo.gl/bD5dBBDdvt1XbC4N7" },
+    { icon: MapPin, label: "1st Floor, 62, Vallalar Salai Rd, Venkata Nagar, Puducherry, 605011", href: "https://maps.app.goo.gl/RZWDAnrVS584vrcS9" },
   ];
 
   return (

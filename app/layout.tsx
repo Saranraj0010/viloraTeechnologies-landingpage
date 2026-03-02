@@ -115,7 +115,7 @@ export default function RootLayout({
         <CustomCursor />
         <div className="container mx-auto">
           {children}
-          <Toaster position="top-right" richColors/>
+          <Toaster position="top-right" richColors closeButton duration={3000}/>
         </div>
         <script
           type="application/ld+json"

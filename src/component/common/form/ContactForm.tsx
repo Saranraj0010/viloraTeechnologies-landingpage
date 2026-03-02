@@ -64,10 +64,10 @@ const ContactForm = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">
+              <label htmlFor="fullName" className="text-sm text-gray-500 mb-1">
                 Full name<span className="text-red-500">*</span>
               </label>
-              <input
+              <input id="fullName"
                 name="fullName"
                 value={formData.fullName}
                 onChange={onChange}
@@ -80,10 +80,10 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">
+              <label htmlFor="email" className="text-sm text-gray-500 mb-1">
                 Email address<span className="text-red-500">*</span>
               </label>
-              <input
+              <input id="email"
                 name="email"
                 value={formData.email}
                 onChange={onChange}
@@ -98,10 +98,10 @@ const ContactForm = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">
+              <label htmlFor="phoneNumber" className="text-sm text-gray-500 mb-1">
                 Phone number<span className="text-red-500">*</span>
               </label>
-              <input
+              <input id="phoneNumber"
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={onChange}
@@ -116,8 +116,8 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">Inquiry Type</label>
-              <select
+              <label htmlFor="inquiryType" className="text-sm text-gray-500 mb-1">Inquiry Type</label>
+              <select id="inquiryType"
                 name="inquiryType"
                 value={formData.inquiryType}
                 onChange={onChange}
@@ -142,7 +142,8 @@ const ContactForm = () => {
           </div>
 
           <div className="flex flex-col">
-            <textarea
+            <label htmlFor="message" className="text-sm text-gray-500 mb-1">Message</label>
+            <textarea id="message"
               name="message"
               value={formData.message}
               onChange={onChange}
