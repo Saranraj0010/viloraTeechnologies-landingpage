@@ -211,7 +211,7 @@ export default function OurProjects() {
                     </div>
                 </div>
             ) : (
-                <div className="w-full grid md:grid-cols-4 gap-8">
+                <div className="w-full grid justify-center md:grid-cols-4 gap-8">
                     {filteredData.map((project) => (
                         <a
                             key={project.id}

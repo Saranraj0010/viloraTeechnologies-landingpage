@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import imagge from "../../../public/assets/hero-banne3.png"
+import imagge from "../../../public/assets/hero-banne3.webp"
 import { LocationEdit, Mail, Map, Phone, X } from "lucide-react";
 import ContactForm from "@/src/component/common/form/ContactForm";
 import { useState } from "react";
@@ -21,8 +21,7 @@ const Contact = () => {
     <>
       <div className="relative z-10 w-full h-180 overflow-hidden">
 
-
-        <Image src={imagge} alt="" className="grayscale-70 hidden md:block" />
+        <Image src={imagge} alt="Vilora Technologies Contact Page Banner" className="grayscale-70 hidden md:block" />
 
         <div className="absolute top-40 mx-5 text-white max-w-xl">
           <h1 className="text-5xl font-bold text-primary mb-4">Contact Us</h1>
@@ -38,13 +37,10 @@ const Contact = () => {
 
 
 
-        <div
-          className="absolute right-5 -top-10  z-10 flex items-center justify-center 
-                  px-4 sm:px-6 lg:px-8
-                  py-16 sm:py-20 lg:py-28
-                  min-h-[800px] sm:min-h-[650px] lg:min-h-[800px]"
-        >
-          <ContactForm />
+        <div className="absolute right-5 -top-10  z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 min-h-[800px] sm:min-h-[650px] lg:min-h-[800px]">
+          <div className="bg-gray-50 p-4 rounded-lg shadow-2xl -mt-8">
+            <ContactForm />
+          </div>
         </div>
 
         <svg
@@ -73,13 +69,16 @@ const Contact = () => {
         </h1>
 
         <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid gap-10 sm:grid-cols-2 mx-20 lg:grid-cols-3">
+          <div className="grid gap-10 justify-center sm:grid-cols-2 mx-20 lg:grid-cols-3">
             <div className="group border border-blue-200 p-8 flex flex-col items-center text-center">
-              <a href={mailtoUrl}>
+              <a
+                href={mailtoUrl}
+                aria-label="Send email to Vilora Technologies"
+              >
                 <div className="w-20 h-20 cursor-pointer rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300">
                   <Mail
                     size={36}
-                    className="text-blue-600 group-hover:text-white transition-all duration-300 "
+                    className="text-blue-600 group-hover:text-white transition-all duration-300"
                   />
                 </div>
               </a>
@@ -113,10 +112,9 @@ const Contact = () => {
                 Our Location
               </h2>
               <p className="text-gray-500 mt-4 text-sm max-w-xs">
-                83 & 84, 1st Floor, J Plaza, Ellaipillaichavady, Sithananda Nagar,
-                Thanthai Periyar Nagar
+                62 ,1st Floor ,Vallalar Salai Rd , <br /> Venkata Nagar,
               </p>
-              <p className="text-gray-500 text-sm">Puducherry – 605005</p>
+              <p className="text-gray-500 text-sm">Puducherry–605011.</p>
             </div>
 
             {/* <div className="group border border-blue-200  p-8 flex flex-col items-center text-center ">
@@ -149,6 +147,7 @@ const Contact = () => {
           <div className="w-full lg:w-1/2  ">
             <div className="w-full h-[350px] sm:h-[450px]  lg:h-full  overflow-hidden ">
               <iframe
+                title="Vilora Technologies Location on Google Maps"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.878239676996!2d79.8194659!3d11.940395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53610aafffffff%3A0xdb17030ffba9d036!2sVILORA%20Technologies!5e0!3m2!1sen!2sin!4v1700000000000"
                 className="h-[670px] w-[800px]"
                 style={{ border: 0 }}
