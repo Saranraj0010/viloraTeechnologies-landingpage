@@ -1,6 +1,8 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import { useFormStore } from "../../../section/Store/FormStore/useFormStore";
+import Link from "next/link";
 
 const ContactForm = () => {
   const { formData, error, onChange, validate } = useFormStore();
@@ -62,10 +64,10 @@ const ContactForm = () => {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">
+              <label htmlFor="fullName" className="text-sm text-gray-500 mb-1">
                 Full name<span className="text-red-500">*</span>
               </label>
-              <input
+              <input id="fullName"
                 name="fullName"
                 value={formData.fullName}
                 onChange={onChange}
@@ -78,10 +80,10 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">
+              <label htmlFor="email" className="text-sm text-gray-500 mb-1">
                 Email address<span className="text-red-500">*</span>
               </label>
-              <input
+              <input id="email"
                 name="email"
                 value={formData.email}
                 onChange={onChange}
@@ -96,10 +98,10 @@ const ContactForm = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">
+              <label htmlFor="phoneNumber" className="text-sm text-gray-500 mb-1">
                 Phone number<span className="text-red-500">*</span>
               </label>
-              <input
+              <input id="phoneNumber"
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={onChange}
@@ -114,8 +116,8 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col">
-              <label className="text-sm text-gray-500 mb-1">Inquiry Type</label>
-              <select
+              <label htmlFor="inquiryType" className="text-sm text-gray-500 mb-1">Inquiry Type</label>
+              <select id="inquiryType"
                 name="inquiryType"
                 value={formData.inquiryType}
                 onChange={onChange}
@@ -140,7 +142,8 @@ const ContactForm = () => {
           </div>
 
           <div className="flex flex-col">
-            <textarea
+            <label htmlFor="message" className="text-sm text-gray-500 mb-1">Message</label>
+            <textarea id="message"
               name="message"
               value={formData.message}
               onChange={onChange}
@@ -157,19 +160,24 @@ const ContactForm = () => {
 
           <div className="flex justify-center items-center sm:justify-end">
             <button
-              type="submit"
+            type="submit"
               onClick={() => {
                 if (!validate) {
                   handleWhatsAppSubmit;
                 }
               }}
-              className="w-full sm:w-auto flex items-center justify-center gap-3 bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-700 transition-colors"
-            >
-              <span className="w-7 h-7 rounded-full bg-blue-500 flex items-center justify-center">
-                →
-              </span>
-              Send message
-            </button>
+          className="relative group overflow-hidden  flex items-center gap-3  bg-white  px-5 py-3 md:px-6 md:py-3 rounded-full font-semibold"
+        >
+          <span className="absolute inset-0 w-0 bg-blue-600 transition-all duration-500 group-hover:w-full rounded-full"></span>
+
+          <span className="relative z-10  bg-blue-800 text-white w-8 h-8 flex items-center justify-center rounded-full transition-all duration-500  group-hover:bg-white  group-hover:text-blue-600">
+                <ArrowRight />
+          </span>
+
+          <span className="relative z-10 text-black  transition-colors duration-500 group-hover:text-white">
+            Send message
+          </span>
+        </button>
           </div>
         </form>
       </div>
