@@ -266,68 +266,68 @@ export const OurProduct = [
         url: "#",
         category: "Studio"
     },
-    // {
-    //     id: 11,
-    //     name: "Pondy Bajar",
-    //     homeImg: home11,
-    //     pageImg: pageImg11,
-    //     url: "#",
-    //     category: "OnlineShopping"
-    // },
-    // {
-    //     id: 12,
-    //     name: "Cervo Care",
-    //     homeImg: home12,
-    //     pageImg: pageImg12,
-    //     url: "https://cervocare.com/",
-    //     category: "HealthCare"
-    // },
-    // {
-    //     id: 13,
-    //     name: "Aeroseptix",
-    //     homeImg: home13,
-    //     pageImg: pageImg13,
-    //     url: "http://aeroseptix.in/",
-    //     category: "OnlineShopping"
-    // },
-    // {
-    //     id: 14,
-    //     name: "Bharrathividyashram",
-    //     homeImg: home14,
-    //     pageImg: pageImg14,
-    //     url: "#",
-    //     category: "Othersites"
-    // },
-    // {
-    //     id: 15,
-    //     name: "Nadi Astro Bhava",
-    //     homeImg: home15,
-    //     pageImg: pageImg15,
-    //     url: "https://nadiastrobhava.com/",
-    //     category: "Othersites"
-    // },
-    // {
-    //     id: 16,
-    //     name: "Job Portal",
-    //     homeImg: home16,
-    //     pageImg: pageImg16,
-    //     url: "#",
-    //     category: "Othersites"
-    // },
-    // {
-    //     id: 17,
-    //     name: "Cervo Care App",
-    //     homeImg: home17,
-    //     pageImg: pageImg17,
-    //     url: "https://play.google.com/store/search?q=cervo+care&c=apps&hl=en-IN",
-    //     category: "MobilApp"
-    // },
-    // {
-    //     id: 18,
-    //     name: "Vilora Shopping App",
-    //     homeImg: home18,
-    //     pageImg: pageImg18,
-    //     url: "#",
-    //     category: "MobilApp"
-    // }
+    {
+        id: 11,
+        name: "Pondy Bajar",
+        homeImg: home11,
+        pageImg: pageImg11,
+        url: "#",
+        category: "OnlineShopping"
+    },
+    {
+        id: 12,
+        name: "Cervo Care",
+        homeImg: home12,
+        pageImg: pageImg12,
+        url: "https://cervocare.com/",
+        category: "HealthCare"
+    },
+    {
+        id: 13,
+        name: "Aeroseptix",
+        homeImg: home13,
+        pageImg: pageImg13,
+        url: "http://aeroseptix.in/",
+        category: "OnlineShopping"
+    },
+    {
+        id: 14,
+        name: "Bharrathividyashram",
+        homeImg: home14,
+        pageImg: pageImg14,
+        url: "#",
+        category: "Othersites"
+    },
+    {
+        id: 15,
+        name: "Nadi Astro Bhava",
+        homeImg: home15,
+        pageImg: pageImg15,
+        url: "https://nadiastrobhava.com/",
+        category: "Othersites"
+    },
+    {
+        id: 16,
+        name: "Job Portal",
+        homeImg: home16,
+        pageImg: pageImg16,
+        url: "#",
+        category: "Othersites"
+    },
+    {
+        id: 17,
+        name: "Cervo Care App",
+        homeImg: home17,
+        pageImg: pageImg17,
+        url: "https://play.google.com/store/search?q=cervo+care&c=apps&hl=en-IN",
+        category: "MobilApp"
+    },
+    {
+        id: 18,
+        name: "Vilora Shopping App",
+        homeImg: home18,
+        pageImg: pageImg18,
+        url: "#",
+        category: "MobilApp"
+    }
 ];
