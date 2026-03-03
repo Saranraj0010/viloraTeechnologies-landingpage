@@ -77,15 +77,11 @@
 //     </section>
 //   );
 // }
-
-
 "use client";
-
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { OurWorks } from "../../component/localDb/OurWorks";
 import { usePathname } from "next/navigation";
-
 export default function OurProjects() {
 
     const [activeCategory, setActiveCategory] = useState("All");
@@ -134,10 +130,7 @@ export default function OurProjects() {
         })
     ];
 
-    const filteredData =
-        activeCategory === "All"
-            ? data
-            : data.filter(item => item.category === activeCategory);
+    const filteredData = activeCategory === "All" ? data : data.filter(item => item.category === activeCategory);
 
     return (
         <section className="bg-white py-20 px-4 min-h-screen flex flex-col items-center">
@@ -150,14 +143,7 @@ export default function OurProjects() {
             {!isHomePage && (
                 <div className="flex flex-wrap justify-center gap-4 mb-10">
                     {categories.map((cat, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setActiveCategory(cat)}
-                            className={`px-5 py-2 rounded-full transition-all duration-300 ${activeCategory === cat
-                                ? "bg-primary text-white"
-                                : "bg-gray-200 text-gray-700"
-                                }`}
-                        >
+                        <button key={index} onClick={() => setActiveCategory(cat)} className={`px-5 py-2 rounded-full transition-all duration-300 ${activeCategory === cat ? "bg-primary text-white" : "bg-gray-200 text-gray-700"}`}>
                             {cat}
                         </button>
                     ))}
@@ -166,27 +152,10 @@ export default function OurProjects() {
 
             {isHomePage ? (
                 <div className="max-w-7xl w-full overflow-hidden relative">
-                    <div
-                        ref={sliderRef}
-                        className={`flex gap-6 ${isTransitioning
-                            ? "transition-transform duration-700 ease-in-out"
-                            : ""
-                            }`}
-                        style={{
-                            transform: `translateX(-${currentIndex * 20}%)`,
-                        }}
-                    >
+                    <div ref={sliderRef} className={`flex gap-6 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}style={{transform: `translateX(-${currentIndex * 20}%)`,}}>
                         {data.map((project, index) => (
-                            <div
-                                key={index}
-                                className="min-w-full h-[300px] md:min-w-[33.33%] relative group md:h-[480px] rounded-sm overflow-hidden"
-                            >
-                                <Image
-                                    src={isHomePage ? project.homeImg : project.pageImg}
-                                    alt={project.name}
-                                    fill
-                                    className="object-cover grayscale-90 transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
-                                />
+                            <div key={index} className="min-w-full h-[300px] md:min-w-[33.33%] relative group md:h-[480px] rounded-sm overflow-hidden">
+                                <Image src={isHomePage ? project.homeImg : project.pageImg} alt={project.name} fill className="object-cover grayscale-90 transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"/>
 
                                 <div className="absolute inset-0 flex top-5 justify-center ">
                                     <h3 className="text-white text-2xl font-bold text-center px-4">
@@ -199,36 +168,18 @@ export default function OurProjects() {
 
                     <div className="flex justify-center gap-2 mt-10">
                         {Array.from({ length: data.length - 2 }).map((_, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => setCurrentIndex(idx)}
-                                className={`h-1.5 transition-all duration-500 rounded-full ${currentIndex === idx
-                                    ? "w-10 bg-primary"
-                                    : "w-2 bg-primary/30"
-                                    }`}
-                            />
+                            <button key={idx} onClick={() => setCurrentIndex(idx)} className={`h-1.5 transition-all duration-500 rounded-full ${currentIndex === idx ? "w-10 bg-primary" : "w-2 bg-primary/30"}`}/>
                         ))}
                     </div>
                 </div>
             ) : (
-                <div className="w-full grid justify-center md:grid-cols-4 gap-8">
+                <div className="w-full grid justify-center md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-8">
                     {filteredData.map((project) => (
-                        <a
-                            key={project.id}
-                            href={project.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group"
-                        >
+                        <a key={project.id} href={project.url} target="_blank" rel="noopener noreferrer" className="group">
                             <div className="w-[230px]">
 
                                 <div className="relative w-full h-[200px] rounded-xl overflow-hidden">
-                                    <Image
-                                        src={isHomePage ? project.homeImg : project.pageImg}
-                                        alt={project.name}
-                                        fill
-                                        className="object-cover transition-all duration-500 group-hover:scale-105"
-                                    />
+                                    <Image src={isHomePage ? project.homeImg : project.pageImg} alt={project.name} fill className="object-cover transition-all duration-500 group-hover:scale-105"/>
                                 </div>
 
                                 <h3 className="text-secondary text-lg font-semibold text-center mt-3">
@@ -240,7 +191,6 @@ export default function OurProjects() {
                     ))}
                 </div>
             )}
-
         </section>
     );
 }

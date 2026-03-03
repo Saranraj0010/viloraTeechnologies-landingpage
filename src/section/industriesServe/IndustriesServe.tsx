@@ -104,13 +104,13 @@ const handleCardLeave = (e: React.MouseEvent<HTMLDivElement>) => {
                     ))}
                 </div>
             </section>
-            <section className="bg-[#0857cf] grid grid-cols-2 relative">
+            <section className="bg-[#0857cf] grid grid-cols-1 lg:grid-cols-2 md:relative">
                 <div className="p-10">
                     <div className="">
-                        <h1 className="text-white my-5 text-5xl">{featuresDetails.title}</h1>
+                        <h1 className="text-white my-5 text-2xl md:text-4xl lg:text-5xl">{featuresDetails.title}</h1>
                         <p className="text-gray-200 mb-15">{featuresDetails.details}</p>
                     </div>
-                    <div className=" grid md:grid-cols-2 gap-5">
+                    <div className=" grid lg:grid-cols-2 justify-center gap-5">
                         {
                             features.map((item) => (
                                 <div key={item.id} className="flex cursor-pointer p-5 rounded-md border-gray-100 w-70 flex-col items-center border"
@@ -125,7 +125,7 @@ const handleCardLeave = (e: React.MouseEvent<HTMLDivElement>) => {
                         }
                     </div>
                 </div>
-                <div className=" absolute right-0 bottom-1/3">
+                <div className=" lg:absolute relative lg:right-0  lg:bottom-1/3">
                     <Image className="w-[600px]" src={featuresDetails.img} alt="" />
                 </div>
             </section>

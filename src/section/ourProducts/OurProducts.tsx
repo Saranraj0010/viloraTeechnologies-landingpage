@@ -125,7 +125,7 @@ export default function OurProducts() {
                     </div>
                 </div>
             ) : (
-                <div className="w-full grid justify-center md:grid-cols-4 gap-8">
+                <div className="w-full grid justify-center md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-8">
                     {filteredData.map((project) => (
                         <a key={project.id} href={project.url} target="_blank" rel="noopener noreferrer" className="group">
                             <div className="w-[230px]">
